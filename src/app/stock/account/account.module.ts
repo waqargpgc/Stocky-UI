@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AccountRoutingModule } from './account-routing.module';
 import { UsersComponent } from './users/users.component';
+import { NbCardModule, NbButtonModule } from '@nebular/theme';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,9 @@ import { UsersComponent } from './users/users.component';
   ],
   imports: [
     CommonModule,
-    AccountRoutingModule
+    AccountRoutingModule,
+    NbCardModule,
+    NbButtonModule
   ]
 })
 export class AccountModule { }

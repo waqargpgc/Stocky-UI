@@ -12,11 +12,6 @@ import { AccountLayout, DefaultLayout } from './@theme/layouts';
 
 const routes: Routes = [
   {
-    path: 'pages',
-    loadChildren: () => import('./pages/pages.module')
-      .then(m => m.PagesModule),
-  },
-  {
     path: 'account', component: AccountLayout,
     // canActivate: [OnlyLoggedInUsers],
     loadChildren: () => import('./stock/account/account.module')
@@ -57,8 +52,8 @@ const routes: Routes = [
       },
     ],
   },
-  { path: '', redirectTo: 'pages', pathMatch: 'full' },
-  { path: '**', redirectTo: 'pages' },
+  { path: '', redirectTo: 'inv', pathMatch: 'full' },
+  { path: '**', redirectTo: 'inv' },
 ];
 
 const config: ExtraOptions = {
