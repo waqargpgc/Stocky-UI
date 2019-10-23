@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { HttpBaseService } from '@services/http-base.service';
-import { ApiEndPoints } from '@models/constants';
-import { HttpSetup } from '@models/common';
+import { ApiEndPoints } from './../models/constants';
+import { HttpSetup } from './../models/common';
+import { HttpBaseService } from './http-base.service';
 
 // ProductService
 @Injectable({

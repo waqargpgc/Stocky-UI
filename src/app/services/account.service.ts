@@ -3,12 +3,12 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 import { map, share, tap } from 'rxjs/operators'
 import { Observable, BehaviorSubject } from "rxjs";
-import { HttpSetup } from '@models/common';
-import { ApiEndPoints, avatarThumbnail } from '@models/constants';
-import { HttpBaseService } from '@services/http-base.service';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { HttpBaseService } from './http-base.service';
+import { ApiEndPoints, avatarThumbnail } from './../models/constants';
+import { HttpSetup } from './../models/common';
 
 @Injectable({
   providedIn: 'root'

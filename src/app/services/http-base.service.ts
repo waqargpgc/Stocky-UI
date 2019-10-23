@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse, HttpResponse, HttpResponseBase } from '@
 
 import { Observable, throwError } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { HttpSetup } from '@models/common';
+import { HttpSetup } from './../models/common';
 import { tap, map } from 'rxjs/operators';
 
 @Injectable({

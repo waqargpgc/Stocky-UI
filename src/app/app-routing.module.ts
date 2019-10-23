@@ -8,12 +8,24 @@ import {
   NbRequestPasswordComponent,
   NbResetPasswordComponent,
 } from '@nebular/auth';
+import { AccountLayout, DefaultLayout } from './@theme/layouts';
 
 const routes: Routes = [
   {
     path: 'pages',
-    loadChildren: () => import('app/pages/pages.module')
+    loadChildren: () => import('./pages/pages.module')
       .then(m => m.PagesModule),
+  },
+  {
+    path: 'account', component: AccountLayout,
+    // canActivate: [OnlyLoggedInUsers],
+    loadChildren: () => import('./stock/account/account.module')
+      .then(m => m.AccountModule)
+  },
+  {
+    path: 'inv', component: DefaultLayout,
+    loadChildren: () => import('./stock/inventory/inventory.module')
+      .then(m => m.InventoryModule),
   },
   {
     path: 'auth',
